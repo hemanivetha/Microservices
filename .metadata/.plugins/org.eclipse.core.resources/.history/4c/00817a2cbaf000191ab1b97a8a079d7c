@@ -1,0 +1,65 @@
+package com.loan;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="loan")
+public class Loan {
+	
+	
+	private String loanname;
+	private String loanamount;
+	private String mortgageitem;
+	private double weight;
+	private double creditscore;
+	private String pan;
+	private double salary;
+	
+	
+	public String getLoanname() {
+		return loanname;
+	}
+	public void setLoanname(String loanname) {
+		this.loanname = loanname;
+	}
+	public String getLoanamount() {
+		return loanamount;
+	}
+	public void setLoanamount(String loanamount) {
+		this.loanamount = loanamount;
+	}
+	public String getMortgageitem() {
+		return mortgageitem;
+	}
+	public void setMortgageitem(String mortgageitem) {
+		this.mortgageitem = mortgageitem;
+	}
+	public double getWeight() {
+		return weight;
+	}
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+	public double getCreditscore() {
+		return creditscore;
+	}
+	public void setCreditscore(double creditscore) {
+		this.creditscore = creditscore;
+	}
+	public String getPan() {
+		return pan;
+	}
+	public void setPan(String pan) {
+		this.pan = pan;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	
+	
+
+}

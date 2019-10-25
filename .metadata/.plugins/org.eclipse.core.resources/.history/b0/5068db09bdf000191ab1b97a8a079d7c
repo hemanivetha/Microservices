@@ -1,0 +1,23 @@
+package com.loan;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+@RestController
+public class LoanController {
+	
+	@Autowired
+	LoanRepository lr;
+
+	@RequestMapping("/")
+	public ModelAndView getEmployees(@ModelAttribute Loan user) {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("employeeList", lr.addLoanDetails(user.getLoanname(), user.getLoanamount(), user.getMortgageitem(), user.getWeight(),
+				user.getCreditscore(), user.getPan(), user.getSalary()));
+		mv.setViewName("home");
+		return mv;
+	}
+
+}

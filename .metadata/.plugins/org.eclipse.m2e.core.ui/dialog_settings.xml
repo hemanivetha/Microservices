@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Coalesce\Downloads\Hackathon"/>
+			<item value="C:\Users\Coalesce\Downloads\springboot-unit-example"/>
+			<item value="C:\Users\Coalesce\Documents\workspace-sts-3.9.9.RELEASE2\mortage\spring-boot-mortgage-calculator-master\src\main"/>
+			<item value="C:\hcljava\Mortage\spring-boot-mortgage-calculator-master"/>
+			<item value="C:\Users\Coalesce\Downloads\OneToManyJPA"/>
+			<item value="C:\Users\Coalesce\Downloads\bank-userservice"/>
+			<item value="C:\Users\Coalesce\Downloads\bank-accountservice"/>
+			<item value="C:\Users\Coalesce\Downloads\bank-webclient"/>
+			<item value="C:\Users\Coalesce\Downloads\webclient-microservice-server-master"/>
+			<item value="C:\Users\Coalesce\Downloads\accounts-microservice-server-master"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="spring-boot-mortgage-calculator-master"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="spring-boot-mortgage-calculator-master"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,38 @@
+package com.hema.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.client.RestTemplate;
+
+
+public class RemoteAccountRepository implements AccountRepository{
+	
+	@Autowired
+	protected RestTemplate restTemplate;
+	
+	protected String serviceUrl;
+
+	@Override
+	public Account findAccountByUserid(int userid) {
+		return restTemplate.getForObject(serviceUrl + "/Account/{userid}",
+				Account.class, userid);
+	}
+
+	@Override
+	public Account findAccountByAccountnum(int accountnum) {
+		return restTemplate.getForObject(serviceUrl + "/Account/{accountnum}",
+				Account.class, accountnum);
+	}
+
+	@Override
+	public Account addAcc(Account account) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteAcc(int accountnum) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

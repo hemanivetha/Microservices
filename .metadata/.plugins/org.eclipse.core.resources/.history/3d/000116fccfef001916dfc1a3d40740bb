@@ -1,0 +1,23 @@
+package com.hema.demo;
+
+import java.util.List;
+
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
+@Repository
+public interface EmployRepository extends PagingAndSortingRepository<Employ, Integer>{
+	@Query("SELECT e FROM Employ e WHERE dept=?1 AND desig=?2")
+	List<Employ> findByDeptAndDesig(String dept,String desig);
+	
+	@Query("SELECT e FROM Employ e WHERE dept=?1 and desig=?2 and basic>=?3")
+	List<Employ> findByBasicabv20000(String dept,String desig,int basic);
+	
+	@Query("SELECT e FROM Employ e WHERE dept=?1 and desig=?2 and basic<=?3 and name like 'S%'")
+	List<Employ> findByStarting(String dept,String desig,int basic,String name);
+
+	@Query("select e from Employ e where dept=?1 and desig=?2 and order by basic=?3")
+	List<Employ> findByDeptDesigBasicSortByDesc(String dept,String desig,int basic);
+
+}

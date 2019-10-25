@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+		<h1>Apply Loan</h1>
+	</center>
+	<form method="post" action="show">
+		<center>
+			<table>
+
+				<th>Loan Name:</th>
+				<th>LoanAmount:</th>
+				<th>Mortgage Item</th>
+				<th>Weight:
+				<th />
+				<th>Credit Score:</th>
+				<th>PAN:</th>
+				<th>Salary:</th>
+
+				<tr>
+					<td><input type="text" name="loanname" /></td>
+					<td><input type="text" name="loanamount" /></td>
+					<br />
+					<td><select name="mortgageitem">
+							<option>Select</option>
+							<option>Gold</option>
+							<option>Land</option>
+							<option>Car</option>
+
+					</select></td>
+					<td><input type="text" name="weight" /></td>
+					<br />
+					<br />
+					<td><input type="text" name="creditscore" /></td>
+					<br />
+					<br />
+					<td><input type="text" name="pan" /></td>
+					<br />
+					<br />
+					<td><input type="text" name="salary" /></td>
+					<br />
+					<br />
+					<td><input type="submit" value="Apply" /></td>
+
+				</tr>
+			</table>
+		</center>
+	</form>
+
+</body>
+</html>

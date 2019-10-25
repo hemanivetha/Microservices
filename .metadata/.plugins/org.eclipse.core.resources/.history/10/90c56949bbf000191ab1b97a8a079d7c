@@ -1,0 +1,18 @@
+package com.loan;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+
+@Repository
+
+public interface LoanInterface {
+	
+	@Query("Insert e into loan e WHERE loanname=?1 and loanamount=?2 and mortgageitem=?3 and"
+			+ "weight=?4 and creditscore=?5 and pan=?6 and salary=?7")
+	
+	public String addLoanDetails(String loanname,double loanamount,String mortgageitem,double weight,
+			double creditscore,String pan,double salary);
+}

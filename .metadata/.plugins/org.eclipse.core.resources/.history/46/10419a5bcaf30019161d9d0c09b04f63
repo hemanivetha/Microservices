@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<h1>Loan Application</h1>
+	<form>
+	<tr> <th>Already have a Mortgage Loan: </th> 
+	 <th><input type="radio" name="loan" value="yes"> Yes</input> </th>
+	<th> <input type="radio" name="loan" value="no">No </input> </th>
+	</tr> </br>
+	<tr><th>Credit Score: </th>
+	<th> <input type="text" name="creditScore" /> </th>
+	</tr></br>
+
+	Property: 
+	<input type="radio" name="land" />Land </br> 
+	Area Code: 
+	<input type="text" name="acode" /> </br> 
+	Area square Feet : 
+	<input type="text" name="asqFt" /> </br> 
+	Legal Residency : 
+	<input type="radio" name="resident" value="Indian" checked> Indian</input> 
+	<input type="radio" name="resident" value="NRI"> NRI </input><br>
+
+	</form>
+</table>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<center>
+		<h1>Apply Loan</h1>
+	</center>
+	<form method="post" action="show">
+		<center>
+			<table border="1px solid black">
+
+				<tr><th>Loan Name:</th>
+				<th><input type="text" name="loanname" /></th>
+				</tr><br/>
+				
+				<tr><th>LoanAmount:</th>
+				<th><input type="text" name="loanamount" /></th></tr><br/>
+				<tr><th>Mortgage Item</th>
+				<th><select name="mortgageitem">
+							<option>Select</option>
+							<option>Gold</option>
+							<option>Land</option>
+							<option>Car</option>
+
+					</select></th></tr><br/>
+				<tr><th>Credit Score:</th>
+				<th><input type="text" name="creditscore" /></th></tr><br/>
+				<tr><th>PAN:</th>
+				<th><input type="text" name="pan" /></th>
+				</tr><br/>
+				<tr><th>Salary:</th>
+				<th><input type="text" name="salary" /></th>
+				</tr>
+
+
+
+			</table>
+			<center>
+				<td><input type="submit" value="Apply" /></td>
+			</center>
+		</center>
+	</form>
+
+</body>
+</html>

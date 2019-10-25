@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		Already have a Mortgage Loan: <input type="radio" name="loan"
+			value="yes"> Yes</input> <input type="radio" name="loan" value="no">
+		No </input> <br> Credit Score: <input type="text" name="creditScore" /> </br>
+
+		Property: <input type="radio" name="land" />Land </br> Area Code: <input
+			type="text" name="acode" /> </br> Area square Feet : <input type="text"
+			name="asqFt" /> </br> Legal Residency : <input type="radio"
+			name="resident" value="Indian" checked> Indian</input> <input
+			type="radio" name="resident" value="NRI"> NRI </input><br>
+
+	</form>
+
+</body>
+</html>

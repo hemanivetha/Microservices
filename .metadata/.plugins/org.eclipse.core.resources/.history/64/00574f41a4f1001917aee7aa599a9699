@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+Already have a Mortgage Loan:
+  <input type="radio" name="loan" value="yes" checked> Yes<br>
+  <input type="radio" name="loan" value="no"> No<br>
+  
+Credit Score:
+	<input type="text" name="creditScore" />
+	
+Property:
+	<input type="radio" name="land" /> 
+	
+</form> 
+
+</body>
+</html>

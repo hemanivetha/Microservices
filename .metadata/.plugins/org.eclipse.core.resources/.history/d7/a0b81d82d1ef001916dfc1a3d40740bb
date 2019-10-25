@@ -1,0 +1,96 @@
+package com.hema.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+@RestController
+public class EmployController {
+	
+	@Autowired
+	EmployRepository dao;
+	
+	@RequestMapping("/")
+	public ModelAndView getEmployees() {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findAll());
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping("/displayjavacontractors")
+	public ModelAndView getJavaContractors() {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findByDeptAndDesig("Java", "C"));
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	
+	@RequestMapping("/displayjavaemployees")
+	public ModelAndView getJavaEmployees() {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findByDeptAndDesig("Java", "E"));
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping("/displayjavamanagers")
+	public ModelAndView getJavaManagers() {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findByDeptAndDesig("Java", "M"));
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping("/displaymgerabv20000")
+	public ModelAndView getMgrAbv20000() {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findByBasicabv20000("Java", "M",20000));
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping("/displayByStarting")
+	public ModelAndView getJavaStartWith() {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findByStarting("Java", "E", 40000, "S"));
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping("/displayAllSortByDesig")
+	public ModelAndView displayAllSortByDesig() {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findAll(Sort.by("desig")));
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping("/displayAllSortByDesigDesc")
+	public ModelAndView displayAllSortByDesigDesc() {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findAll(Sort.by("desig").descending()));
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping("/disSortByBasicDescDeptByDesc")
+	public ModelAndView disSortByBasicDescDeptByDesc() {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findAll(Sort.by("basic","desig").descending()));
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping("/disJavaEmpSortBySalDesc")
+	public ModelAndView disJavaEmpSortBySalDesc() {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findByDeptDesigBasicSortByDesc("Java", "E", "basic"));
+		mv.setViewName("home");
+		return mv;
+	}
+
+
+}
